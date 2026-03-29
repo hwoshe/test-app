@@ -1,0 +1,43 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100dvh;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-pulse {
+  box-shadow: 0 0 0 0 rgba(19, 236, 91, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { 
+    transform: scale(0.95); 
+    box-shadow: 0 0 0 0 rgba(19, 236, 91, 0.7); 
+  }
+  70% { 
+    transform: scale(1); 
+    box-shadow: 0 0 0 6px rgba(19, 236, 91, 0); 
+  }
+  100% { 
+    transform: scale(0.95); 
+    box-shadow: 0 0 0 0 rgba(19, 236, 91, 0); 
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
