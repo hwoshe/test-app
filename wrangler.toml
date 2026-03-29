@@ -1,0 +1,12 @@
+name = "test-app"
+type = "pages"
+
+[build]
+command = "npm run build"
+directory = "dist"
+
+[build.environment]
+NODE_VERSION = "18.17.0"
+
+[deploy]
+production_branch = "master"
